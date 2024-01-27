@@ -69,7 +69,7 @@ public class CustomerController {
                 pstmt.addBatch();
             }
             int[] updateCounts = pstmt.executeBatch();
-            System.out.println(updateCounts+" rows were added");
+            System.out.println(updateCounts.length+" rows were added");
 
             return ResponseEntity.ok().build();
 
