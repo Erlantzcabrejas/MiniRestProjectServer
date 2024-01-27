@@ -52,7 +52,7 @@ public class CustomerController {
     @PostMapping(produces = "application/json")
     public ResponseEntity<ArrayList<Customer>> addCustomers(@RequestBody ArrayList<Customer> customers) throws Exception {
         try{
-            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/customers?allowPublicKeyRetrieval=true&useSSL=false&serverTimezone=UTC","root", "6433");   // For MySQL only
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/customers?allowPublicKeyRetrieval=true&useSSL=false&serverTimezone=UTC","root", "6433");
 
             PreparedStatement pstmt = conn.prepareStatement(
                     "insert into customers values ( ?, ?, ?, ?, ?, ?, ? ,?)");
